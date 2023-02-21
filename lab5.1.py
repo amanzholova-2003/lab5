@@ -1,20 +1,18 @@
 
 def sortSur(nameList):
-	l2 = []
-
 	
-	for ele in nameList:
-		l2.append(ele.split())
-	nameList = []
-
 	
-	for ele in sorted(l2, key=lambda x: x[-1]):
-		nameList.append(' '.join(ele))
-
+	nameList.sort(key=lambda x: x.split()[-1])
+	
 	
 	return nameList
 
-nameList = ['John Wick Class B', 'Jason Voorhees Class A','Freddy Krueger Class C', 'Keyser Soze Class E', 'Mohinder Singh Pandher Class D']
+
+
+nameList = ['John Wick Class A', 'Jason Voorhees Class B',
+			'Freddy Krueger Class C', 'Keyser Soze Class D',
+			'Mohinder Singh Pandher Class E']
+
 
 print('\nList of Names:\n', nameList)
 print('\nAfter sorting:\n', sortSur(nameList))
